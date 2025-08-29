@@ -1,0 +1,124 @@
+dokumentacja
+
+# 📄 Dokumentacja aplikacji „MojeZadania”
+
+---
+
+## 📱 Opis ogólny
+
+**„MojeZadania”** to aplikacja edukacyjna zaprojektowana z myślą o uczniach i studentach, którzy chcą w prosty sposób zarządzać swoimi przedmiotami i zadaniami domowymi.
+
+Aplikacja umożliwia:
+- Tworzenie listy przedmiotów
+- Dodawanie zadań domowych lub projektów do konkretnego przedmiotu
+- Przegląd wszystkich zadań
+- Przegląd zadań według daty w kalendarzu
+- Automatyczne przechowywanie danych lokalnie przez 7 dni
+
+---
+
+## 🧩 Główne funkcje aplikacji
+
+### 1. 🗂️ Przedmioty (`SubjectsView`)
+- Użytkownik może stworzyć listę swoich przedmiotów (np. Matematyka, Język polski, Biologia)
+- Każdemu przedmiotowi można przypisać kolor — widoczny w interfejsie
+- Przedmioty są widoczne w formie listy z możliwością:
+  - dodania nowego przedmiotu
+  - usunięcia przedmiotu
+  - przejścia do szczegółów, gdzie dodawane są zadania
+
+---
+
+### 2. ✏️ Zadania (`SubjectDetailView` + `AddTaskView`)
+- Do każdego przedmiotu można dodać wiele zadań
+- Każde zadanie zawiera:
+  - nazwę (np. „Zrobić pracę domową ze str. 45”)
+  - datę oddania (deadline)
+- Zadania są prezentowane w przejrzystej liście
+- Status zadania nie można jeszcze zmieniać (funkcję można dodać w przyszłości)
+- Zadania starsze niż 7 dni są automatycznie ukrywane przy ponownym uruchomieniu aplikacji
+
+---
+
+### 3. 📋 Przegląd (`OverviewView`)
+- Lista wszystkich zadań z różnych przedmiotów wyświetlana w jednym miejscu
+- Sortowane według daty oddania
+- Dla każdego zadania widoczne są:
+  - nazwa
+  - przypisany przedmiot
+  - termin oddania
+- Pomaga użytkownikowi mieć kontrolę nad wszystkimi zadaniami na raz
+
+---
+
+### 4. 📅 Kalendarz (`CalendarView`)
+- Umożliwia wybór konkretnej daty przy pomocy graficznego `DatePicker`
+- Po wybraniu dnia użytkownik widzi listę zadań zaplanowanych na ten dzień
+- Pomaga planować dzień do przodu
+
+---
+
+## 💾 Zapisywanie danych (`DataManager.swift`)
+- Aplikacja korzysta z wbudowanego mechanizmu `UserDefaults`
+- Wszystkie przedmioty i zadania są zapisywane lokalnie na urządzeniu
+- Po ponownym uruchomieniu aplikacji dane są automatycznie ładowane
+- Zadania starsze niż 7 dni są automatycznie odfiltrowywane
+
+---
+
+## ⚙️ Technologie
+- Język: **Swift 5**
+- Interfejs: **SwiftUI**
+- Model danych: **Struct + Codable**
+- Przechowywanie danych: **UserDefaults**  
+- Platforma: iOS 
+
+---
+
+## 📁 Struktura katalogów
+
+```
+📦 MojeZadania
+├── MojeZadaniaApp.swift
+├── ContentView.swift
+│
+├── 📁 Models
+│   └── Models.swift
+│
+├── 📁 Views
+│   ├── SubjectsView.swift
+│   ├── SubjectDetailView.swift
+│   ├── AddTaskView.swift
+│   ├── OverviewView.swift
+│   └── CalendarView.swift
+│
+├── 📁 Utils
+│   ├── DataManager.swift
+```
+
+## 👩‍🎓 Dla kogo jest ta aplikacja?
+
+Aplikacja została zaprojektowana z myślą o:
+- uczniach szkół podstawowych i średnich
+- studentach
+- osobach, które chcą zorganizować naukę z podziałem na przedmioty i terminy zadań
+
+---
+
+## 👏 Autor
+
+Projekt stworzony przez **Agatę Pełtak**  
+
+---
+
+## ✅ Podsumowanie
+
+„MojeZadania” to prosta, ale bardzo funkcjonalna aplikacja edukacyjna,  
+która wspiera uczniów w planowaniu nauki przez:
+
+✔️ zarządzanie przedmiotami  
+✔️ śledzenie zadań  
+✔️ widok kalendarza  
+✔️ automatyczne czyszczenie zadań starszych niż 7 dni  
+
+---
