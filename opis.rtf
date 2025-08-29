@@ -1,109 +1,99 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab560
-\pard\pardeftab560\partightenfactor0
+Opis
 
-\f0\b\fs40 \cf0 Opis\
-\pard\pardeftab560\slleading20\partightenfactor0
+---
 
-\f1\b0\fs26 \cf0 \
----\
-\
-# \uc0\u55357 \u57056 \u65039  Zrealizowane funkcje i etapy rozwoju projektu \'96 *MojeZadania*\
-\
----\
-\
-## \uc0\u55357 \u56524  Opis projektu\
-\
-Projekt *\'84MojeZadania\'94* to mobilna aplikacja napisana w j\uc0\u281 zyku **Swift** z u\u380 yciem technologii **SwiftUI**, umo\u380 liwiaj\u261 ca uczniom i studentom efektywne zarz\u261 dzanie nauk\u261  poprzez przejrzyste planowanie przedmiot\'f3w i zada\u324  domowych.\
-\
-Aplikacja dzia\uc0\u322 a w pe\u322 ni lokalnie \'96 dane s\u261  przechowywane z wykorzystaniem `UserDefaults`.\
-\
----\
-\
-## \uc0\u9989  Zrealizowane funkcje aplikacji\
-\
-### 1. \uc0\u55357 \u56536  **System zarz\u261 dzania przedmiotami**\
-- Dodawanie nowych przedmiot\'f3w przez u\uc0\u380 ytkownika (np. Historia, Matematyka)\
-- Przypisywanie kolor\'f3w do przedmiot\'f3w (dla czytelno\uc0\u347 ci)\
-- Przegl\uc0\u261 d i usuwanie przedmiot\'f3w\
-- Przej\uc0\u347 cie do szczeg\'f3\u322 owego widoku danego przedmiotu\
-\
----\
-\
-### 2. \uc0\u9999 \u65039  **Zarz\u261 dzanie zadaniami**\
-- Dodawanie zada\uc0\u324  domowych/projekt\'f3w do ka\u380 dego przedmiotu  \
-  (zawieraj\uc0\u261  tytu\u322  oraz termin oddania)\
-- Zadania wy\uc0\u347 wietlane w porz\u261 dku chronologicznym\
-- Zadania prezentowane w kontek\uc0\u347 cie konkretnego przedmiotu\
-- Filtrowanie zada\uc0\u324  po dacie\
-\
----\
-\
-### 3. \uc0\u55357 \u56787  **Widok kalendarza**\
-- Graficzny `DatePicker` umo\uc0\u380 liwiaj\u261 cy wyb\'f3r dnia\
-- Po wskazaniu daty \'96 lista zada\uc0\u324  przypisanych do tego dnia\
-- Umo\uc0\u380 liwienie uczniowi planowania codziennego\
-\
----\
-\
-### 4. \uc0\u55357 \u56523  **Przegl\u261 d wszystkich zada\u324 **\
-- Jednolita lista wszystkich zada\uc0\u324  z r\'f3\u380 nych przedmiot\'f3w\
-- Zadania posortowane wed\uc0\u322 ug daty oddania\
-- Przejrzysty interfejs pozwalaj\uc0\u261 cy szybko sprawdzi\u263  status pracy\
-\
----\
-\
-### 5. \uc0\u55357 \u56510  **Zapis i przechowywanie danych**\
-- Dane u\uc0\u380 ytkownika s\u261  zapisywane lokalnie poprzez `UserDefaults`\
-- Przy uruchomieniu aplikacji dane s\uc0\u261  \u322 adowane z pami\u281 ci\
-- Zadania przechowywane tylko przez **7 dni** od momentu utworzenia\
-- Dzi\uc0\u281 ki temu aplikacja dzia\u322 a szybko i nie wymaga r\u281 cznego czyszczenia zada\u324 \
-\
----\
-\
-## \uc0\u55357 \u56520  Etapy rozwoju projektu\
-\
-| Etap                 | Opis                                                                 |\
-|----------------------|----------------------------------------------------------------------|\
-| \uc0\u9989  **Etap 1: Projekt UI**       | Stworzenie podstawowego uk\u322 adu z `TabView` i widokami kart                              |\
-| \uc0\u55356 \u57303 \u65039  **Etap 2: Modele danych**    | Zdefiniowanie modeli `Subject` i `TaskItem`                                              |\
-| \uc0\u55358 \u56817  **Etap 3: SubjectsView**     | Dodawanie przedmiot\'f3w, przypisywanie kolor\'f3w, integracja z list\u261                         |\
-| \uc0\u9997 \u65039  **Etap 4: AddTaskView**      | Formularz dodawania zada\u324  do wybranego przedmiotu                                        |\
-| \uc0\u55358 \u56809  **Etap 5: SubjectDetailView**| Widok szczeg\'f3\u322 owy z zadaniami konkretnego przedmiotu                                    |\
-| \uc0\u55357 \u56523  **Etap 6: OverviewView**     | Widok globalny wszystkich zada\u324  u\u380 ytkownika                                              |\
-| \uc0\u55357 \u56517  **Etap 7: CalendarView**     | Wyb\'f3r daty i filtrowanie zada\u324  przypisanych do dnia                                      |\
-| \uc0\u55357 \u56510  **Etap 8: Zapis danych**     | Implementacja `UserDefaults` + `Codable` (DataManager.swift)                            |\
-| \uc0\u55358 \u56825  **Etap 9: Filtrowanie zada\u324 **| Usuwanie zada\u324  starszych ni\u380  7 dni na etapie \u322 adowania                                  |\
-| \uc0\u9989  **Etap 10: Testy i poprawki**| Naprawa b\u322 \u281 d\'f3w typu Codable, Equatable, brak import\'f3w, b\u322 \u281 dy kompilacji                 |\
-\
----\
-\
-## \uc0\u55356 \u57256  Inne wa\u380 ne cechy projektu\
-\
-- U\uc0\u380 ywa **SwiftUI** \'96 deklaratywnego stylu budowania UI  \
-- Minimalistyczny, przyjazny interfejs\
-- \uc0\u321 atwa rozbudowa o:\
-  - powiadomienia\
-  - sortowanie\
-  - synchronizacj\uc0\u281  iCloud/Firebase\
-- Kod napisany modularnie i przejrzy\uc0\u347 cie \'96 \u322 atwy do utrzymania i uczenia si\u281 \
-\
----\
-\
-## \uc0\u55357 \u56602  Podsumowanie\
-\
-Aplikacja \'84MojeZadania\'94 spe\uc0\u322 nia sw\'f3j podstawowy cel:  \
-pomaga uczniom i studentom w szybkim i wygodnym organizowaniu ich pracy domowej oraz zada\uc0\u324 .\
-\
-Projekt ten by\uc0\u322  doskona\u322 ym \u263 wiczeniem w:\
-- budowie aplikacji w **Swift + SwiftUI**  \
-- pracy z **modelami danych i ich przechowywaniem lokalnym**  \
-- projektowaniu **czytelnego i funkcjonalnego interfejsu u\uc0\u380 ytkownika**\
-\
----\
-\
-Agata Pe\uc0\u322 tak }
+# 🛠️ Zrealizowane funkcje i etapy rozwoju projektu – *MojeZadania*
+
+---
+
+## 📌 Opis projektu
+
+Projekt *„MojeZadania”* to mobilna aplikacja napisana w języku **Swift** z użyciem technologii **SwiftUI**, umożliwiająca uczniom i studentom efektywne zarządzanie nauką poprzez przejrzyste planowanie przedmiotów i zadań domowych.
+
+Aplikacja działa w pełni lokalnie – dane są przechowywane z wykorzystaniem `UserDefaults`.
+
+---
+
+## ✅ Zrealizowane funkcje aplikacji
+
+### 1. 📘 **System zarządzania przedmiotami**
+- Dodawanie nowych przedmiotów przez użytkownika (np. Historia, Matematyka)
+- Przypisywanie kolorów do przedmiotów (dla czytelności)
+- Przegląd i usuwanie przedmiotów
+- Przejście do szczegółowego widoku danego przedmiotu
+
+---
+
+### 2. ✏️ **Zarządzanie zadaniami**
+- Dodawanie zadań domowych/projektów do każdego przedmiotu  
+  (zawierają tytuł oraz termin oddania)
+- Zadania wyświetlane w porządku chronologicznym
+- Zadania prezentowane w kontekście konkretnego przedmiotu
+- Filtrowanie zadań po dacie
+
+---
+
+### 3. 🗓 **Widok kalendarza**
+- Graficzny `DatePicker` umożliwiający wybór dnia
+- Po wskazaniu daty – lista zadań przypisanych do tego dnia
+- Umożliwienie uczniowi planowania codziennego
+
+---
+
+### 4. 📋 **Przegląd wszystkich zadań**
+- Jednolita lista wszystkich zadań z różnych przedmiotów
+- Zadania posortowane według daty oddania
+- Przejrzysty interfejs pozwalający szybko sprawdzić status pracy
+
+---
+
+### 5. 💾 **Zapis i przechowywanie danych**
+- Dane użytkownika są zapisywane lokalnie poprzez `UserDefaults`
+- Przy uruchomieniu aplikacji dane są ładowane z pamięci
+- Zadania przechowywane tylko przez **7 dni** od momentu utworzenia
+- Dzięki temu aplikacja działa szybko i nie wymaga ręcznego czyszczenia zadań
+
+---
+
+## 📈 Etapy rozwoju projektu
+
+| Etap                 | Opis                                                                 |
+|----------------------|----------------------------------------------------------------------|
+| ✅ **Etap 1: Projekt UI**       | Stworzenie podstawowego układu z `TabView` i widokami kart                              |
+| 🏗️ **Etap 2: Modele danych**    | Zdefiniowanie modeli `Subject` i `TaskItem`                                              |
+| 🧱 **Etap 3: SubjectsView**     | Dodawanie przedmiotów, przypisywanie kolorów, integracja z listą                        |
+| ✍️ **Etap 4: AddTaskView**      | Formularz dodawania zadań do wybranego przedmiotu                                        |
+| 🧩 **Etap 5: SubjectDetailView**| Widok szczegółowy z zadaniami konkretnego przedmiotu                                    |
+| 📋 **Etap 6: OverviewView**     | Widok globalny wszystkich zadań użytkownika                                              |
+| 📅 **Etap 7: CalendarView**     | Wybór daty i filtrowanie zadań przypisanych do dnia                                      |
+| 💾 **Etap 8: Zapis danych**     | Implementacja `UserDefaults` + `Codable` (DataManager.swift)                            |
+| 🧹 **Etap 9: Filtrowanie zadań**| Usuwanie zadań starszych niż 7 dni na etapie ładowania                                  |
+| ✅ **Etap 10: Testy i poprawki**| Naprawa błędów typu Codable, Equatable, brak importów, błędy kompilacji                 |
+
+---
+
+## 🎨 Inne ważne cechy projektu
+
+- Używa **SwiftUI** – deklaratywnego stylu budowania UI  
+- Minimalistyczny, przyjazny interfejs
+- Łatwa rozbudowa o:
+  - powiadomienia
+  - sortowanie
+  - synchronizację iCloud/Firebase
+- Kod napisany modularnie i przejrzyście – łatwy do utrzymania i uczenia się
+
+---
+
+## 🔚 Podsumowanie
+
+Aplikacja „MojeZadania” spełnia swój podstawowy cel:  
+pomaga uczniom i studentom w szybkim i wygodnym organizowaniu ich pracy domowej oraz zadań.
+
+Projekt ten był doskonałym ćwiczeniem w:
+- budowie aplikacji w **Swift + SwiftUI**  
+- pracy z **modelami danych i ich przechowywaniem lokalnym**  
+- projektowaniu **czytelnego i funkcjonalnego interfejsu użytkownika**
+
+---
+
+Agata Pełtak 
